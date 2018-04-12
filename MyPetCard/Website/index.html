@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MyPetCard - Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+    <script src="web3.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/MypetCard">MyPetCard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hash et Stockage Blockchain</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <script>  console.log(web3); </script>
+
+      <!-- Heading Row -->
+      <div class="row my-4">
+        <div class="col-lg-8">
+          <img class="img-fluid rounded" src="img/Picture1.png" alt="" style="margin-top : 35px;">
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+          <h1>MyPetCard - Technologie et confiance</h1>
+          <p>Avec MyPetCard®, les vétérinaires ont accès aux informations de tous les animaux enregistrés sur la blockchain sur l’accord de leurs propriétaires. Notre solution apporte la certitude de la constante intégrité des données stockées sur notre plateforme.</p>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Call to Action Well -->
+      <div class="card text-white bg-secondary my-4 text-center">
+        <div class="card-body">
+          <p class="text-white m-0">Cette application est une démo de notre technologie. A ce niveau de développement, elle n'est pas vouée à être utiliser de manière professionelle.</p>
+        </div>
+      </div>
+
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Fifou</h2>
+              <p class="card-text">Fifou est un chat habitant à Paris. Il a 4 ans, est plutôt d'humeur joviale. Fifou est allergique au paracétamol et déteste les chiens.</p>
+            </div>
+            <div class="card-footer">
+              <a href="animal.php?key=0xee5b382ebbe938cb843a743b7aced0730840a6dd" class="btn btn-primary">Gérer les données de Fifou</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Haribo</h2>
+              <p class="card-text">Haribo est un Golden Retriever. Très malin et joueur, on a détecté très tôt une malformation cardique sur son ventricule droit.</p>
+            </div>
+            <div class="card-footer">
+              <a href="animal.php?nom=haribo" class="btn btn-primary">Gérer les données d'Haribo</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Tonnerre</h2>
+              <p class="card-text">Tonnerre est une couleuvre à nez retroussé. Race protégée, Tonnerre possède des caractéristiques qui lui sont propres. Très avide de spuris en guise de repas, Tonnerre a un taux de diabète préoccuppant.</p>
+            </div>
+            <div class="card-footer">
+              <a href="animal.php?nom=tonnerre" class="btn btn-primary">Gérer les données de Tonnerre</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+      </div>
+      <!-- /.row -->
+      <script>
+              var web3 require("web3");
+
+              if (typeof web3 !== 'undefined') {
+                  web3 = new Web3(web3.currentProvider);
+              } else {
+                  // set the provider you want from Web3.providers
+                  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+              }
+              web3.eth.defaultAccount = web3.eth.accounts[0];
+              document.write(web3.eth.defaultAccount);
+              document.innerHTML = "SIGADHJAEDGH";
+
+              web3.eth.getBlock(48, function(error, result){
+          if(!error)
+              console.log(JSON.stringify(result));
+          else
+              console.error(error);
+      })
+
+          </script>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">ECE &copy; MyPetCard 2018 - G.Euvrard - B.Roche - M.Truppa - T.Chalmandrier - M.Marcus</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
